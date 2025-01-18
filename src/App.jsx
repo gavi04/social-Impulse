@@ -19,6 +19,7 @@ const App = () => {
     try {
       const response = await fetch('https://hooks.zapier.com/hooks/catch/21362938/2k98lk5/', {
         method: 'POST',
+        mode: "no-cors",
         headers: {
           'Content-Type': 'application/json',
         },
