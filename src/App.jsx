@@ -17,7 +17,8 @@ const App = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://hooks.zapier.com/hooks/catch/21362938/2k98lk5/', {
+      // const respone =
+       await fetch('https://hooks.zapier.com/hooks/catch/21362938/2k98lk5/', {
         method: 'POST',
         mode: "no-cors",
         headers: {
@@ -25,13 +26,14 @@ const App = () => {
         },
         body: JSON.stringify(formData),
       });
-
-      if (response.ok) {
-        alert('Message sent successfully!');
-        setFormData({ name: '', email: '', subject: '', message: '' });
-      } else {
-        alert('Failed to send message. Please try again.');
-      }
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      // removed temporarily
+      // if (response.ok) {
+      //   alert('Message sent successfully!');
+      //   setFormData({ name: '', email: '', subject: '', message: '' });
+      // } else {
+      //   alert('Failed to send message. Please try again.');
+      // }
     } catch (error) {
       console.error('Error submitting the form:', error);
       alert('An error occurred. Please try again later.');
