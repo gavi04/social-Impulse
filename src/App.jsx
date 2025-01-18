@@ -4,8 +4,8 @@ const App = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
-    message: '',
+    phno: '',
+    city: '',
   });
 
   const handleChange = (e) => {
@@ -171,17 +171,17 @@ const App = () => {
             />
             <input
               type="text"
-              name="subject"
+              name="phno"
               value={formData.subject}
               onChange={handleChange}
-              placeholder="Subject"
+              placeholder="Mobile number"
               className="w-full bg-gray-800 text-white p-4 rounded-lg focus:ring-2 focus:ring-green-500"
             />
             <textarea
-              name="message"
+              name="city"
               value={formData.message}
               onChange={handleChange}
-              placeholder="Message"
+              placeholder="city"
               rows={4}
               className="w-full bg-gray-800 text-white p-4 rounded-lg focus:ring-2 focus:ring-green-500"
             ></textarea>
